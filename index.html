@@ -38,6 +38,50 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+//the code above is the block of code that Dr. Riedel added in order to ensure efficiency in testing and refining the code.
+//the code below will consist of functions that will draw shapes and text on the canvas.
+	
+function rect() {
+ 	var b_canvas = document.getElementById("b");
+	var b_context = b_canvas.getContext("2d");
+  	b_context.fillRect(50, 25, 150, 100);
+}
+
+//this function draws a rectangle on the canvas
+	
+function name() {
+	var b_canvas = document.getElementById("b");
+	var b_context = b_context.getContext("2d");
+	b_context.font = "72px Arial";
+	b_context.strokeText("Bernadine Decapia", 10, 50);
+}
+
+//this function displays my name on the canvas
+	
+function imageCanvas() {
+  	var b_canvas = document.getElementById("b");
+	var b_context = b_context.getContext("2d");
+	var img = new Image();
+	img.onload = function() {
+  		b_context.drawImage(img, 10, 10);
+	};
+	img.src ='https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/University_of_Texas_at_Austin_seal.svg/1200px-University_of_Texas_at_Austin_seal.svg.png';
+}
+
+
+//this function displays an image on the canvas
+
+function clear() {
+	var b_canvas = document.getElementById("b");
+	var b_context = b_context.getContext("2d");
+	b_context.clearRect(0, 0, b_canvas.width, b_canvas.height);
+}
+
+//this function clears the canvas of any graphics
+
+	
+
 </script>
 
 
@@ -68,11 +112,27 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<p>App 6's objective has to do with various actions on a canvas. Click the button to get started.</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Go to the Canvas </a>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+</div>
+	
+<div class="page" id="one">
+	
+    	<div id="content" class="w3-container">
+		<!--I got the dimensions for the canvas by looking up the common dimensions of an iPhone screen. -->
+        	<canvas id="b" width="540" height="960"></canvas>
+			<a onclick="rect();" class="w3-btn w3-green"> Rectangle</a>
+			<a onclick="name();" class="w3-btn w3-red"> Name</a>
+			<a onclick="imageCanvas();" class="w3-btn w3-grey"> Image</a>
+			<a onclick="clear();" class="w3-btn w3-blue"> Clear</a>
+		
+ 	</div>
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
