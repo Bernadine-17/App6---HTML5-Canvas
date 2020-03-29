@@ -52,7 +52,7 @@ function rect() {
 	
 function name() {
 	var b_canvas = document.getElementById("b");
-	var b_context = b_context.getContext("2d");
+	var b_context = b_canvas.getContext("2d");
 	b_context.font = "24px Arial";
 	b_context.strokeText("Bernadine Decapia", 200, 200);
 }
@@ -61,7 +61,7 @@ function name() {
 	
 function imageCanvas() {
   	var b_canvas = document.getElementById("b");
-	var b_context = b_context.getContext("2d");
+	var b_context = b_canvas.getContext("2d");
 	var img = new Image();
 	img.onload = function() {
   		b_context.drawImage(img, 200, 200);
@@ -74,7 +74,7 @@ function imageCanvas() {
 
 function clearCanvas() {
 	var b_canvas = document.getElementById("b");
-	var b_context = b_context.getContext("2d");
+	var b_context = b_canvas.getContext("2d");
 	b_context.clearRect(0, 0, b_canvas.width, b_canvas.height);
 }
 
