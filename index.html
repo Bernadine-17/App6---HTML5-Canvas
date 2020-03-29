@@ -54,7 +54,7 @@ function name() {
 	var b_canvas = document.getElementById("b");
 	var b_context = b_canvas.getContext("2d");
 	b_context.font = "12px Arial";
-	b_context.strokeText("Bernadine Decapia", 200, 200);
+	b_context.fillText("Bernadine Decapia", 0, 0);
 }
 
 //this function displays my name on the canvas
@@ -64,7 +64,7 @@ function imageCanvas() {
 	var b_context = b_canvas.getContext("2d");
 	var img = new Image();
 	img.onload = function() {
-  		b_context.drawImage(img, 200, 200);
+  		b_context.drawImage(img, 100, 100 );
 	};
 	img.src ='https://2jsqmx3urpic3hm7hj2c4vvi-wpengine.netdna-ssl.com/files/ut-austin-logo.png';
 }
@@ -104,6 +104,8 @@ function clearCanvas() {
     left: 0vw;
     z-index: 1;
 }
+
+
 </style>
 
 <body>
