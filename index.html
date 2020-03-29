@@ -50,11 +50,11 @@ function rect() {
 
 //this function draws a rectangle on the canvas
 	
-function name() {
+function writeName() {
 	var b_canvas = document.getElementById("b");
 	var b_context = b_canvas.getContext("2d");
-	b_context.font = "12px Arial";
-	b_context.fillText("Bernadine Decapia", 0, 0);
+	b_context.font = "30px Arial";
+	b_context.fillText("Bernadine Decapia", canvas.width/2, canvas.height/2);
 }
 
 //this function displays my name on the canvas
@@ -130,7 +130,7 @@ function clearCanvas() {
 		<!--Original dimensions: 540x960-->
         	<canvas id="b" width="400" height="400" style="border:1px solid #000000;"></canvas>
 			<a onclick="rect();" class="w3-btn w3-green"> Rectangle</a>
-			<a onclick="name();" class="w3-btn w3-red"> Name</a>
+			<a onclick="writeName();" class="w3-btn w3-red"> Name</a>
 			<a onclick="imageCanvas();" class="w3-btn w3-grey"> Image</a>
 			<a onclick="clearCanvas();" class="w3-btn w3-blue"> Clear</a>
 		
