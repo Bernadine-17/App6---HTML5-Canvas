@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The goal of the code is to display a variety of graphics such as lines, shapes, and text onto a canvas as a response to the click of a button.
  
 Known Issues:
-blah, blah, blah, blah
+The buttons are underneath the canvas but to the side on the laptop. On the iPhone, the buttons are completely underneath the canvas.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -49,6 +49,10 @@ function rect() {
 }
 
 //this function draws a rectangle on the canvas
+//the first two variables calls the canvas to the webpage
+//line 48 fills the canvas with a rectangle with the given dimensions and coordinates for position.
+//the first slot gives the x coordinate while the second slot gives the y coordinate.
+//the third slot gives the width and the fourth slot gives the height of the rectangle
 	
 function myName() {
 	var b_canvas = document.getElementById("b");
@@ -58,7 +62,10 @@ function myName() {
 }
 
 //this function displays my name on the canvas
-	
+//the first two variables calls the canvas to the webpage
+//line 60 selects the size and font of the text
+//line 61 creates the text by putting the string on the first slot, the x coordinate on the second slot, and the y coordinate on the third slot
+
 function imageCanvas() {
   	var b_canvas = document.getElementById("b");
 	var b_context = b_canvas.getContext("2d");
@@ -69,8 +76,12 @@ function imageCanvas() {
 	img.src ='https://2jsqmx3urpic3hm7hj2c4vvi-wpengine.netdna-ssl.com/files/ut-austin-logo.png';
 }
 
-
 //this function displays an image on the canvas
+//the first two variables calls the canvas to the webpage
+//line 72 creates the variable that will pull the image from the URL
+//line 73 loads the image before it is selected
+//line 74 selects the image named "img" and puts it in the x and y coordinate according to the second and third slot
+//line 76 defines the image according to the image address given
 
 function clearCanvas() {
 	var b_canvas = document.getElementById("b");
@@ -79,12 +90,12 @@ function clearCanvas() {
 }
 
 //this function clears the canvas of any graphics
-
+//the first two variables calls the canvas to the webpage
+//line 89 clears the canvas by starting on the top left corner and clearing everything within the width and height of the canvas
 	
-
 </script>
 
-
+<!--this just customizes the style of the webpages-->
 
 <style>	
 .body {
@@ -108,6 +119,8 @@ function clearCanvas() {
 
 </style>
 
+<!--the body customizes the content of the webpage-->
+	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
@@ -115,28 +128,27 @@ function clearCanvas() {
 	
 <div id="content" class="w3-container">
 	<p>App 6's objective has to do with various actions on a canvas. Click the button to get started.</p>
-	
+	<!--this button prompts the webpage to go to the next one which contains the canvas-->
 	<a href="#one" class="w3-btn w3-grey w3-round"> Go to the Canvas </a>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
-	
+<!--this webpage contains the canvas with the 4 buttons-->	
 <div class="page" id="one">
 	
     	<div id="content" class="w3-container">
-		<!--I got the dimensions for the canvas by looking up the common dimensions of an iPhone screen. -->
-		<!--Original dimensions: 540x960-->
+		<!--I got the dimensions for the canvas by trial and error. 400x400 fits the webpage on my laptop and my phone screen-->
         	<canvas id="b" width="400" height="400" style="border:1px solid #000000;"></canvas>
 			<a onclick="rect();" class="w3-btn w3-green"> Rectangle</a>
 			<a onclick="myName();" class="w3-btn w3-red"> Name</a>
 			<a onclick="imageCanvas();" class="w3-btn w3-grey"> Image</a>
 			<a onclick="clearCanvas();" class="w3-btn w3-blue"> Clear</a>
-		
+			<!--These 4 buttons call the different functions in the JavaScript part of the code-->
  	</div>
 </div>
-
+<!--this is the footer for all of the webpages-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
